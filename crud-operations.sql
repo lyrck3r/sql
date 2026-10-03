@@ -1,7 +1,7 @@
-SELECT * FROM cars
+SELECT * FROM cars;
 UPDATE cars
 SET sold = TRUE
-WHERE id IN (1, 5, 6, 11, 15, 17, 20, 21, 25, 28)
+WHERE id IN (1, 5, 6, 11, 15, 17, 20, 21, 25, 28);
 SELECT brand, model, sold FROM cars
     WHERE ((brand = 'Audi'
     AND year BETWEEN 2015 AND 2022)

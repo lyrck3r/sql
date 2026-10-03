@@ -18,6 +18,10 @@ import fs from 'fs';
     const populateTables = fs.readFileSync('populate-tables.sql', 'utf8');
     await db.exec(populateTables);
 
+     // Alter the existing cars table
+     const alterTable = fs.readFileSync('atler-table.sql', 'utf8');
+     await db.exec(alterTable);
+
     // Load the SQL query file
     const query = fs.readFileSync('query.sql', 'utf8');
     await db.exec(query);

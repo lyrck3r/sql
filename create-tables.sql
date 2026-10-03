@@ -1,4 +1,3 @@
-DROP TABLE cars
 CREATE TABLE IF NOT EXISTS cars(
     id SERIAL PRIMARY KEY,
     brand VARCHAR(50) NOT NULL,
@@ -10,6 +9,12 @@ CREATE TABLE IF NOT EXISTS cars(
     sold BOOLEAN NOT NULL DEFAULT FALSE
 )
 
+CREATE TABLE IF NOT EXISTS dealerships(
+    id SERIAL PRIMARY KEY,
+    city TEXT NOT NULL,
+    established DATE NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS staff(
     id SERIAL PRIMARY KEY,
     dealership_id INT NOT NULL REFERENCES dealerships(id),
@@ -17,11 +22,7 @@ CREATE TABLE IF NOT EXISTS staff(
     role TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS dealerships(
-    id SERIAL PRIMARY KEY,
-    city TEXT NOT NULL,
-    established DATE NOT NULL
-);
+
 
 CREATE TABLE IF NOT EXISTS sold_cars(
     id SERIAL PRIMARY KEY,

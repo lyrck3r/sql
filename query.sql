@@ -1,2 +1,3 @@
-SELECT * FROM dealerships;
-SELECT * FROM staff;
+SELECT name, role, city 
+    FROM staff S 
+    RIGHT JOIN dealerships D ON S.dealership_id = D.id;
