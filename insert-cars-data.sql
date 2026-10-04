@@ -1,6 +1,5 @@
-INSERT INTO cars (
-    brand, model, condition, price, year, color 
-) VALUES 
+INSERT INTO cars (brand, model, condition, price, year, color ) 
+    VALUES 
     ('Porsche', '911 Turbo', 4, 55000, 1968, 'white'),
     ('Dodge', 'Challenger T', 2, 25000, 1934, 'dark-brown'),
     ('Mersedes', 'Benz SLS', 5, 1900000, 2021, 'white-blue'),

@@ -109,4 +109,22 @@ ALTER TABLE cars
     ALTER COLUMN model TYPE TEXT,
     ALTER COLUMN color TYPE TEXT;
 
-SELECT * FROM cars; 
+SELECT * FROM cars
+ORDER BY id
+
+UPDATE cars SET
+	sold = TRUE
+WHERE brand = 'Ford'
+	AND model = 'Focus'
+	AND condition > 3;
+
+UPDATE cars SET
+	sold = TRUE 
+WHERE brand = 'BWM'
+	AND model = 'X5'
+	AND condition != 5;
+
+UPDATE cars SET
+	sold = TRUE 
+WHERE brand = 'Volkswagen'
+	AND condition = 5;

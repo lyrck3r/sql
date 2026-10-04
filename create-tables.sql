@@ -22,8 +22,6 @@ CREATE TABLE IF NOT EXISTS staff(
     role TEXT NOT NULL
 );
 
-
-
 CREATE TABLE IF NOT EXISTS sold_cars(
     id SERIAL PRIMARY KEY,
     cars_id INT NOT NULL REFERENCES cars(id),

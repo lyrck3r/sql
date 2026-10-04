@@ -6,7 +6,7 @@ import fs from 'fs';
 
     // Set up the DB files
     const createTables = fs.readFileSync('create-tables.sql', 'utf8');
-    const inserCarsData = fs.readFileSync('insert-query.sql', 'utf8');
+    const inserCarsData = fs.readFileSync('insert-cars-data.sql', 'utf8');
     await db.exec(createTables);
     await db.exec(inserCarsData);
 
@@ -21,6 +21,12 @@ import fs from 'fs';
      // Alter the existing cars table
      const alterTable = fs.readFileSync('atler-table.sql', 'utf8');
      await db.exec(alterTable);
+
+     const insertNewData = fs.readFileSync('insert-new-data.sql', 'utf8');
+     await db.exec(insertNewData);
+
+     const alterConstraints = fs.readFileSync('alter-constains.sql', 'utf8');
+     await db.exec(alterConstraints);
 
     // Load the SQL query file
     const query = fs.readFileSync('query.sql', 'utf8');
