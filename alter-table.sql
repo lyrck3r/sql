@@ -15,5 +15,5 @@ ADD CONSTRAINT dealership_fk FOREIGN KEY(dealership_id)
 REFERENCES dealerships(id);
 
 UPDATE cars SET
-    dealership_id = NULL
-WHERE id BETWEEN 68 AND 78
+    dealership_id = 1
+WHERE id BETWEEN 1 AND 49

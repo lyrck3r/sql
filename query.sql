@@ -58,7 +58,9 @@ ORDER BY total_sales DESC;
 */
 
 SELECT city, COUNT(cars.id) AS car_count FROM cars
-	RIGHT JOIN dealerships D ON dealership_id = D.id
+	FULL JOIN dealerships D ON dealership_id = D.id
 	WHERE sold IS NOT TRUE
 GROUP BY city
 ORDER BY car_count;
+
+SELECT * FROM staff

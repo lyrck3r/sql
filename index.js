@@ -22,9 +22,11 @@ import fs from 'fs';
      const alterTable = fs.readFileSync('atler-table.sql', 'utf8');
      await db.exec(alterTable);
 
+     // Insert new data to the tables
      const insertNewData = fs.readFileSync('insert-new-data.sql', 'utf8');
      await db.exec(insertNewData);
 
+     // Alter constraints dropping NOT NULL
      const alterConstraints = fs.readFileSync('alter-constains.sql', 'utf8');
      await db.exec(alterConstraints);
 

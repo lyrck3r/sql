@@ -1,4 +1,4 @@
-ALTER TABLE cars
+ALTER TABLE staff
 ALTER COLUMN dealership_id DROP NOT NULL;
 
 INSERT INTO staff (name, role)
